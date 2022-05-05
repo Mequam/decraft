@@ -22,7 +22,7 @@ def print_dictionary_vector(v):
 
 #takes a crafting dictionary and returns a dictionary of 
 #required materials
-def decraft(craft_dictionary,item):		
+def decraft(craft_dictionary,item):
 	if item[1] in craft_dictionary:
 		ret_val = {}
 		for thing in craft_dictionary[item[1]]:
@@ -35,15 +35,3 @@ def decraft(craft_dictionary,item):
 	else:
 
 		return {item[1]:item[0]}
-
-if __name__:
-	nms_crafting_dict = {
-	"Mining Operation":[(2,"Solar Panel"),(2,"Batterie"),(1,"Extractor"),(2,"Supply Depot"),(2,"Supply Pipe")],
-	"Solar Panel":[(1,"Metal Plating"),(30,"Gold"),(50,"Chromatic Metal")],
-	"Batterie":[(60,"Magnatized Ferrite"),(100, "Condensed Carbon")],
-	"Extractor":[(1,"Metal Plating"),(100,"Chromatic Metal")],
-	"Supply Depot":[(10,"Metal Plating")],
-	"Supply Pipe":[(25,"Ferrite Dust"),(10,"Carbon")]
-	}
-	
-	print_dictionary_vector(decraft(nms_crafting_dict,(1,"Mining Operation")))
